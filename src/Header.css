@@ -1,0 +1,19 @@
+.line {
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: moveLine 5s linear infinite;
+  }
+  
+  @keyframes moveLine {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  

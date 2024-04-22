@@ -1,0 +1,36 @@
+.circle-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  .fill-circle, .outline-circle {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .fill-circle {
+    background-color: white;
+    animation: moveRightToLeft 2s linear infinite;
+  }
+  
+  .outline-circle {
+    border: 3px solid white;
+    animation: moveRightToLeft 2s linear infinite;
+    z-index: 1; /* Ensure the outline circle appears on top */
+  }
+  
+  @keyframes moveRightToLeft {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: calc(100vw - 700px);
+    }
+  }
+  
