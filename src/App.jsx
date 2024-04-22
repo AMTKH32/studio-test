@@ -2,11 +2,8 @@ import { useState } from 'react'
 import Header from './Header_new'
 import App_studio from './Studio'
 import Footer from './footer_new'
-
-
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
    <Header/>
@@ -17,3 +14,7 @@ function App() {
 }
 
 export default App
+
+
+
+//its not Final code just to give you a output 

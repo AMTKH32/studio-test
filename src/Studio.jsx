@@ -1,29 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Std.css'; // Import CSS file for styling
+import './Std.css'; 
 
 function VerticalLinesCanvas() {
   const canvasRef = useRef(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
     const height = canvas.height;
-    const lineCount = 100; // Number of vertical lines
+    const lineCount = 100; 
     const lineSpacing = 15;
-    const lineHeight = 700; // Height of lines
-    const marginTop = 50; // Margin from the top
-
-    // Clear canvas
+    const lineHeight = 700; 
+    const marginTop = 50; 
     ctx.clearRect(0, 0, width, height);
-
-    // Draw vertical lines
     for (let i = 0; i < lineCount; i++) {
       ctx.beginPath();
       ctx.moveTo(i * lineSpacing, (height - lineHeight) / 2 + marginTop);
       ctx.lineTo(i * lineSpacing, (height + lineHeight) / 2 + marginTop);
       ctx.strokeStyle = 'white';
-      ctx.lineWidth = 1; // Adjust the line width as needed
+      ctx.lineWidth = 1; 
       ctx.stroke();
     }
   }, []);
@@ -32,7 +27,6 @@ function VerticalLinesCanvas() {
     <canvas ref={canvasRef} width={700} height={1000} style={{ marginTop: '-179px' }} />
   );
 }
-
 function CircleAnimation() {
   return (
     <div className="circle-container">

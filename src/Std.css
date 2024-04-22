@@ -22,7 +22,7 @@
   .outline-circle {
     border: 3px solid white;
     animation: moveRightToLeft 2s linear infinite;
-    z-index: 1; /* Ensure the outline circle appears on top */
+    z-index: 1;
   }
   
   @keyframes moveRightToLeft {
